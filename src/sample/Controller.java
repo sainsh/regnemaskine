@@ -92,7 +92,7 @@ public class Controller {
         }
     }
 
-    public void gangeMetode(ActionEvent actionEvent) {
+    public void gangeMetode(ActionEvent actionEvent) {  //add multiply to operations
         try {
             numbers.add(Double.parseDouble(talDisplay.getText()));
             operations.add("*");
@@ -102,7 +102,7 @@ public class Controller {
         }
     }
 
-    public void deviderMetode(ActionEvent actionEvent) {
+    public void deviderMetode(ActionEvent actionEvent) {    //add divide to operations
         try {
             numbers.add(Double.parseDouble(talDisplay.getText()));
             operations.add("/");
@@ -152,7 +152,7 @@ public class Controller {
         talDisplay.setText(talDisplay.getText() + 9);
     }
 
-    public void modulusMetode(ActionEvent actionEvent) {
+    public void modulusMetode(ActionEvent actionEvent) {    //adds modulus to operations
         try {
             numbers.add(Double.parseDouble(talDisplay.getText()));
             operations.add("%");
@@ -169,7 +169,7 @@ public class Controller {
 
     }
 
-    public void clearRecordMetode(ActionEvent actionEvent) {
+    public void clearRecordMetode(ActionEvent actionEvent) {    //empties numbers and operations
         numbers.clear();
         operations.clear();
         talDisplay.setText("0");
