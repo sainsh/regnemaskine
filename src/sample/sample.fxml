@@ -14,10 +14,12 @@
       <ColumnConstraints />
       <ColumnConstraints />
       <ColumnConstraints />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints maxHeight="38.0" minHeight="0.0" prefHeight="27.0" />
       <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
      
@@ -27,10 +29,23 @@
          <GridPane.margin>
             <Insets />
          </GridPane.margin></TextField>
-      <Button fx:id="plusButton" mnemonicParsing="false" onAction="#plusMetode" text="+" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" onAction="#minusMetode" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" onAction="#gangeMetode" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button fx:id="plusButton" mnemonicParsing="false" onAction="#plusMetode" text="+" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#minusMetode" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#gangeMetode" text="*" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" onAction="#deviderMetode" text="/" GridPane.columnIndex="4" GridPane.rowIndex="1" />
       <Button fx:id="equalsButton" mnemonicParsing="false" onAction="#equalsMetode" text="=" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#OnClick7" text="7" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#OnClick8" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#OnClick9" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#OnClick4" text="4" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#OnClick5" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#OnClick6" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#OnClick1" text="1" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" onAction="#OnClick2" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" onAction="#OnClick3" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" onAction="#OnClick0" text="0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" onAction="#modulusMetode" text="mod" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#clearDisplayMethod" text="Clear Display" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#clearRecordMetode" text="Clear Record" GridPane.columnIndex="5" GridPane.rowIndex="2" />
    </children>
 </GridPane>

@@ -59,6 +59,10 @@ public class Controller {
                         System.out.print(resultat + " / " + numbers.get(i + 1) + " = ");
                         resultat /= numbers.get(i + 1);
                         System.out.print(resultat + "\n");
+                    } else if (operations.get(i).equals("%")) {
+                        System.out.print(resultat + " % " + numbers.get(i + 1)+ " = ");
+                        resultat %= numbers.get(i+1);
+                        System.out.print(resultat + "\n");
                     }
 
 
@@ -72,7 +76,7 @@ public class Controller {
             operations.clear();
         } catch (NumberFormatException e) {
             System.out.println("Obs: NumberFormatException" + e.getCause() + e.getMessage()); // if text is inputted
-        } catch (ArithmeticException e){
+        } catch (ArithmeticException e) {
             System.out.println("Obs: ArithemeticException" + e.getCause() + e.getMessage()); // math errors
         }
     }
@@ -106,6 +110,69 @@ public class Controller {
         } catch (NumberFormatException e) {
             System.out.println("Obs: NumberFormatException" + e.getCause() + e.getMessage());
         }
+    }
+
+    public void OnClick7(ActionEvent actionEvent) {
+        talDisplay.setText(talDisplay.getText() + 7);
+    }
+
+    public void OnClick8(ActionEvent actionEvent) {
+        talDisplay.setText(talDisplay.getText() + 8);
+    }
+
+    public void OnClick4(ActionEvent actionEvent) {
+        talDisplay.setText(talDisplay.getText() + 4);
+    }
+
+    public void OnClick5(ActionEvent actionEvent) {
+        talDisplay.setText(talDisplay.getText() + 5);
+    }
+
+    public void OnClick6(ActionEvent actionEvent) {
+        talDisplay.setText(talDisplay.getText() + 6);
+    }
+
+    public void OnClick1(ActionEvent actionEvent) {
+        talDisplay.setText(talDisplay.getText() + 1);
+    }
+
+    public void OnClick2(ActionEvent actionEvent) {
+        talDisplay.setText(talDisplay.getText() + 2);
+    }
+
+    public void OnClick3(ActionEvent actionEvent) {
+        talDisplay.setText(talDisplay.getText() + 3);
+    }
+
+    public void OnClick0(ActionEvent actionEvent) {
+        talDisplay.setText(talDisplay.getText() + 0);
+    }
+
+    public void OnClick9(ActionEvent actionEvent) {
+        talDisplay.setText(talDisplay.getText() + 9);
+    }
+
+    public void modulusMetode(ActionEvent actionEvent) {
+        try {
+            numbers.add(Double.parseDouble(talDisplay.getText()));
+            operations.add("%");
+            talDisplay.setText("0");
+        } catch (NumberFormatException e) {
+            System.out.println("Obs: NumberFormatException" + e.getCause() + e.getMessage());
+        }
+
+    }
+
+    public void clearDisplayMethod(ActionEvent actionEvent) {
+
+        talDisplay.setText("0");
+
+    }
+
+    public void clearRecordMetode(ActionEvent actionEvent) {
+        numbers.clear();
+        operations.clear();
+        talDisplay.setText("0");
     }
 }
 
