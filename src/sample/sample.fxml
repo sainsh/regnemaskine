@@ -12,7 +12,8 @@
       <ColumnConstraints />
       <ColumnConstraints />
       <ColumnConstraints />
-      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints maxHeight="38.0" minHeight="0.0" prefHeight="27.0" />
@@ -22,12 +23,14 @@
      
    </rowConstraints>
    <children>
-      <TextField fx:id="talDisplay" prefHeight="25.0" prefWidth="155.0" text="0" GridPane.columnIndex="1" GridPane.columnSpan="3">
+      <TextField fx:id="talDisplay" text="0" GridPane.columnSpan="2147483647">
          <GridPane.margin>
             <Insets />
          </GridPane.margin></TextField>
       <Button fx:id="plusButton" mnemonicParsing="false" onAction="#plusMetode" text="+" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button fx:id="equalsButton" mnemonicParsing="false" onAction="#equalsMetode" text="=" GridPane.columnIndex="3" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" onAction="#minusMetode" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#gangeMetode" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#deviderMetode" text="/" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <Button fx:id="equalsButton" mnemonicParsing="false" onAction="#equalsMetode" text="=" GridPane.columnIndex="4" GridPane.rowIndex="3" />
    </children>
 </GridPane>

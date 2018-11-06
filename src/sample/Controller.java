@@ -18,49 +18,92 @@ public class Controller {
 
 
     public void plusMetode(ActionEvent actionEvent) {
-        numbers.add(Double.parseDouble(talDisplay.getText()));
-        operations.add("+");
-        talDisplay.setText("0");
+        try {
+            numbers.add(Double.parseDouble(talDisplay.getText()));
+            operations.add("+");
+            talDisplay.setText("0");
+        } catch (NumberFormatException e) {
+            System.out.println("Obs: NumberFormatException" + e.getCause() + e.getMessage());
+        }
 
     }
 
     public void equalsMetode(ActionEvent actionEvent) {
-        numbers.add(Double.parseDouble(talDisplay.getText()));
-        double resultat = numbers.get(0);
-        System.out.println("start: " + resultat);
+        try {
+            numbers.add(Double.parseDouble(talDisplay.getText()));
+            double resultat = numbers.get(0);
+            System.out.print("start: " + resultat + "\n");
 
 
-        if (!operations.isEmpty()) {
+            if (!operations.isEmpty()) {
 
-            for (int i = 0; i < operations.size(); i++) {
+                for (int i = 0; i < operations.size(); i++) {
 
-                if (operations.get(i).equals("+")) {
-                    System.out.print("\n");
-                    resultat += numbers.get(i + 1);
-                    System.out.println(resultat);
+                    if (operations.get(i).equals("+")) {
+                        System.out.print(resultat + " + " + numbers.get(i + 1) + " = ");
+                        resultat += numbers.get(i + 1);
+                        System.out.print(resultat + "\n");
 
 
-                } else if (operations.get(i).equals("-")) {
-                    System.out.println("nummer " + i + " " + numbers.get(i + 1));
-                    resultat -= numbers.get(i + 1);
-                    System.out.println(resultat);
+                    } else if (operations.get(i).equals("-")) {
+                        System.out.print(resultat + " - " + numbers.get(i + 1) + " = ");
+                        resultat -= numbers.get(i + 1);
+                        System.out.print(resultat + "\n");
+                    } else if (operations.get(i).equals("*")) {
+                        System.out.print(resultat + " * " + numbers.get(i + 1) + " = ");
+                        resultat *= numbers.get(i + 1);
+                        System.out.print(resultat + "\n");
+                    } else if (operations.get(i).equals("/")) {
+                        System.out.print(resultat + " / " + numbers.get(i + 1) + " = ");
+                        resultat /= numbers.get(i + 1);
+                        System.out.print(resultat + "\n");
+                    }
+
+
                 }
 
-
             }
-        }
 
-        System.out.println(resultat);
-        talDisplay.setText(String.valueOf(resultat));
-        numbers.clear();
-        operations.clear();
+
+            talDisplay.setText(String.valueOf(resultat));
+            numbers.clear();
+            operations.clear();
+        } catch (NumberFormatException e) {
+            System.out.println("Obs: NumberFormatException" + e.getCause() + e.getMessage());
+        } catch (ArithmeticException e){
+            System.out.println("Obs: ArithemeticException" + e.getCause() + e.getMessage());
+        }
     }
 
 
     public void minusMetode(ActionEvent actionEvent) {
-        numbers.add(Double.parseDouble(talDisplay.getText()));
-        operations.add("-");
-        talDisplay.setText("0");
+        try {
+            numbers.add(Double.parseDouble(talDisplay.getText()));
+            operations.add("-");
+            talDisplay.setText("0");
+        } catch (NumberFormatException e) {
+            System.out.println("Obs: NumberFormatException" + e.getCause() + e.getMessage());
+        }
+    }
+
+    public void gangeMetode(ActionEvent actionEvent) {
+        try {
+            numbers.add(Double.parseDouble(talDisplay.getText()));
+            operations.add("*");
+            talDisplay.setText("0");
+        } catch (NumberFormatException e) {
+            System.out.println("Obs: NumberFormatException" + e.getCause() + e.getMessage());
+        }
+    }
+
+    public void deviderMetode(ActionEvent actionEvent) {
+        try {
+            numbers.add(Double.parseDouble(talDisplay.getText()));
+            operations.add("/");
+            talDisplay.setText("0");
+        } catch (NumberFormatException e) {
+            System.out.println("Obs: NumberFormatException" + e.getCause() + e.getMessage());
+        }
     }
 }
 
