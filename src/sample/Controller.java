@@ -59,7 +59,7 @@ public class Controller {
                         System.out.print(resultat + " / " + numbers.get(i + 1) + " = ");
                         resultat /= numbers.get(i + 1);
                         System.out.print(resultat + "\n");
-                    } else if (operations.get(i).equals("%")) {
+                    } else if (operations.get(i).equals("%")) {// set result as result modulus next number
                         System.out.print(resultat + " % " + numbers.get(i + 1)+ " = ");
                         resultat %= numbers.get(i+1);
                         System.out.print(resultat + "\n");
